@@ -7,7 +7,7 @@ android {
         applicationId "ru.ikaso63.android.ikaso"
         minSdkVersion 16
         targetSdkVersion 24
-        versionCode 10
+        versionCode 11
         versionName "1.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }

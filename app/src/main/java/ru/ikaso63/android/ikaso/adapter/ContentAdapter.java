@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ru.ikaso63.android.ikaso.R;
+import ru.ikaso63.android.ikaso.db.JobBd;
 import ru.ikaso63.android.ikaso.fragment.ContentListFragment;
 import ru.ikaso63.android.ikaso.model.ListContentItem;
 
@@ -44,7 +45,7 @@ public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.ViewHold
     }
 
     public interface CallbackContentAdapter{
-        void callbackContent(ListContentItem listContentItem);
+        void callbackContent(ViewHolder holder);
     }
 
     void addItemsAdapter(List<ListContentItem> listContentItems){
@@ -96,9 +97,27 @@ public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.ViewHold
         tittleTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mCallbackContentAdapter.callbackContent(listContentItem);
+                mCallbackContentAdapter.callbackContent(holder);
             }
         });
+
+
+        mLikedButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                new JobBd().addNewsBd(
+                        context,
+                        mItems.get(holder.getAdapterPosition()).getId(),
+                        mItems.get(holder.getAdapterPosition()).getTitle(),
+                        mItems.get(holder.getAdapterPosition()).getPreview(),
+                        mItems.get(holder.getAdapterPosition()).getBody(),
+                        mItems.get(holder.getAdapterPosition()).getKindId(),
+                        mItems.get(holder.getAdapterPosition()).getTypeId()
+                );
+            }
+        });
+
     }
 
     @Override

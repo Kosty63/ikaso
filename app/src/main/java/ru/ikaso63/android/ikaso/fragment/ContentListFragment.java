@@ -28,6 +28,7 @@ import retrofit2.Response;
 import ru.ikaso63.android.ikaso.R;
 import ru.ikaso63.android.ikaso.adapter.ContentAdapter;
 import ru.ikaso63.android.ikaso.adapter.ImagesAdapter;
+import ru.ikaso63.android.ikaso.db.JobBd;
 import ru.ikaso63.android.ikaso.model.ListContentItem;
 import ru.ikaso63.android.ikaso.utils.App;
 
@@ -144,6 +145,36 @@ public class ContentListFragment extends android.support.v4.app.Fragment impleme
     }
 
     @Override
+    public void callbackContent(final ContentAdapter.ViewHolder holder) {
+        ContentMoreFragment contentMoreFragment = new ContentMoreFragment();
+        Bundle bundle = new Bundle();
+        bundle.putString("title", mItems.get(holder.getAdapterPosition()).getTitle());
+        bundle.putString("body", mItems.get(holder.getAdapterPosition()).getBody());
+        contentMoreFragment.setArguments(bundle);
+        getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, contentMoreFragment).addToBackStack("TopImagesFragment").commit();
+        imagesTopGone();
+
+    }
+
+/*    void addLikedContent(final ContentAdapter.ViewHolder holder){
+
+        holder.itemView.findViewById(R.id.add_liked).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new JobBd().addNewsBd(
+                        getActivity(),
+                        mItems.get(holder.getAdapterPosition()).getId(),
+                        mItems.get(holder.getAdapterPosition()).getTitle(),
+                        mItems.get(holder.getAdapterPosition()).getPreview(),
+                        mItems.get(holder.getAdapterPosition()).getBody(),
+                        mItems.get(holder.getAdapterPosition()).getKindId(),
+                        mItems.get(holder.getAdapterPosition()).getTypeId()
+                );
+            }
+        });
+    }*/
+
+/*    @Override
     public void callbackContent(ListContentItem listContentItem) {
 
         ContentMoreFragment contentMoreFragment = new ContentMoreFragment();
@@ -154,5 +185,5 @@ public class ContentListFragment extends android.support.v4.app.Fragment impleme
         getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, contentMoreFragment).addToBackStack("TopImagesFragment").commit();
         imagesTopGone();
 
-    }
+    }*/
 }
