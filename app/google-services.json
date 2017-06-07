@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1028577576372",
+    "firebase_url": "https://ikaso-eee9f.firebaseio.com",
+    "project_id": "ikaso-eee9f",
+    "storage_bucket": "ikaso-eee9f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1028577576372:android:7228656d7f837419",
+        "android_client_info": {
+          "package_name": "ru.ikaso63.android.ikaso"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1028577576372-kecfm123bi7mme069376hohrcrngvvkb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ru.ikaso63.android.ikaso",
+            "certificate_hash": "1ba47bdb909373eadb6738dbe3c68baa9755b007"
+          }
+        },
+        {
+          "client_id": "1028577576372-g83ldrb2g9m6hjg6svfctbme0ep71dnu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0jcRgDn-YVHGWTRsPUlEn6bzYvjMkST0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1028577576372-g83ldrb2g9m6hjg6svfctbme0ep71dnu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

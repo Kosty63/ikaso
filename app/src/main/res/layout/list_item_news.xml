@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/parent_item_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="88dp"
+    android:visibility="visible"
+    android:background="#eef1f4">
+
+    <ImageView
+        android:id="@+id/images_type"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="#eef1f4"
+        android:layout_weight="1.5"
+        android:padding="16dp"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/tittle_item_content"
+        android:visibility="visible"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:layout_weight="6"
+        android:paddingTop="16dp"
+        android:paddingLeft="8dp"/>
+<!--
+    <TextView
+        android:id="@+id/preview_item_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="6dp"
+        android:paddingBottom="4dp"
+        android:textSize="14sp"
+        android:fontFamily=""
+        android:textColor="@color/black"/>-->
+
+    <ToggleButton
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_liked"
+        android:layout_weight="1"
+        android:textOn=""
+        android:textOff=""
+        android:drawableTop="@drawable/button_background_selector"
+        android:background="#eef1f4"
+        android:paddingTop="16dp"
+        style="?android:attr/borderlessButtonStyle"/>
+
+    <include
+        android:id="@+id/error"
+        layout="@layout/error_layout"
+        android:visibility="gone"/>
+
+</LinearLayout>

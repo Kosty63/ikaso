@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent_liked_content"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="88dp"
+    android:background="#eef1f4">
+
+    <ImageView
+        android:id="@+id/left_images"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:padding="16dp"
+        android:background="#eef1f4"
+        android:src="@drawable/ic_jurist"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/type_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Новость"
+            android:textSize="10dp"
+            android:textColor="@color/black"
+            android:paddingRight="8dp"
+            android:paddingTop="4dp"
+            android:layout_gravity="right"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/items_liked_content"
+            android:paddingTop="8dp"
+            android:paddingLeft="8dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/replace_error_layout"
+        layout="@layout/error_layout"
+        android:visibility="gone"/>
+
+</LinearLayout>

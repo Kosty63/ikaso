@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+        <!--        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#212121"
+            android:orientation="horizontal">
+
+                <ToggleButton
+                    android:id="@+id/button_events"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_event_red"
+                    android:layout_marginTop="10dp"
+                    android:background="#212121"
+                    android:textOn="Мероприятия"
+                    android:textOff="Мероприятия"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"/>
+
+                <ToggleButton
+                    android:id="@+id/button_news"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_news_red"
+                    android:layout_marginTop="10dp"
+                    android:background="#212121"
+                    android:textOn="Новости"
+                    android:textOff="Новости"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"/>
+
+                <ToggleButton
+                    android:id="@+id/button_liked"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_liked_red"
+                    android:layout_marginTop="10dp"
+                    android:background="#212121"
+                    android:textOn="Избранное"
+                    android:textOff="Избранное"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"/>
+
+                <ToggleButton
+                    android:id="@+id/button_contacts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_contact"
+                    android:layout_marginTop="10dp"
+                    android:background="#212121"
+                    android:textOn="Контакты"
+                    android:textOff="Контакты"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"/>
+        </LinearLayout>-->
+        <android.support.design.widget.BottomNavigationView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_bottom_menu"
+            app:itemBackground="@color/background_bottom_menu"
+            app:itemIconTint="@color/bottom_navigation_item_background_color"
+            app:itemTextColor="@color/bottom_navigation_item_background_color"
+            app:menu="@menu/bottom_item_menu"/>

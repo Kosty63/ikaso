@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+<!--        <fragment
+            android:id="@+id/viewMap"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:layout_weight="3"/>-->
+
+        <ru.yandex.yandexmapkit.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:apiKey="4PKX3cQbtIfXX8Z0G6TXsG-K7WQ5w-ewIvc88J4jHasBSZhx7qLaEMgSi2FZ082zCligAidjhzC3Ja3w9ha5laBwLWEKLntm-5pIFA~NXZ4="
+            android:tag="static"
+            android:layout_weight="8"/>
+
+<!--                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/contactsInfo"
+                            android:lineSpacingMultiplier="1.5"/>-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_phone"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/statePhone"
+                            android:id="@+id/state_phone"
+                            android:textSize="20dp"
+                            android:paddingLeft="8dp"
+                            android:textColor="#333333"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        android:paddingLeft="8dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_email" />
+
+                        <TextView
+                            android:id="@+id/ikaso_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/email"
+                            android:paddingLeft="8dp"
+                            android:textSize="20dp"
+                            android:textColor="#333333"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        android:paddingLeft="8dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_phone"/>
+
+                        <TextView
+                            android:id="@+id/hot_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/hotPhone"
+                            android:paddingLeft="8dp"
+                            android:textSize="20dp"
+                            android:textColor="#333333"/>
+                    </LinearLayout>
+                </LinearLayout>
