@@ -108,7 +108,6 @@ public abstract class SingleFragmentActivity extends AppCompatActivity {
         });
     }
 
-
     public static void imagesTopGone(){
         mBannersImageView.setVisibility(GONE);
     }

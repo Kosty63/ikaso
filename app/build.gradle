@@ -23,7 +23,6 @@ android {
 allprojects {
     repositories {
         jcenter()
-        mavenCentral()
         maven { url 'https://github.com/yandexmobile/yandexmapkit-android/raw/maven/' }
     }
 }
@@ -50,3 +49,6 @@ dependencies {
 
 
 apply plugin: 'com.google.gms.google-services'
+repositories {
+    mavenCentral()
+}
